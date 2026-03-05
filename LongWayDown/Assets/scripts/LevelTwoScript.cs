@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GridSet : MonoBehaviour
+public class LevelTwoScript : MonoBehaviour
 {
 
     public GameObject blankSquare;
@@ -23,20 +23,28 @@ public class GridSet : MonoBehaviour
         {
             for (int j = 0; j < gridVertSize; j++)
             {
-                heightmap[i, j] = Random.Range(0.1f,0.5f);
-                Instantiate(blankSquare, new Vector3(i, heightmap[i,j], j), Quaternion.identity);
+                if (i <= 10)
+                {
+                    heightmap[i, j] = Random.Range(0.1f, 0.5f);
+                    Instantiate(blankSquare, new Vector3(i, 1 + heightmap[i, j], j), Quaternion.identity);
+                }
+                else
+                {
+                    heightmap[i, j] = Random.Range(0.1f, 0.5f);
+                    Instantiate(blankSquare, new Vector3(i, heightmap[i, j], j), Quaternion.identity);
+                }
 
             }
         }
 
         CharPOS.x = 10;
-        CharPOS.y = 1.5f + heightmap[(int)CharPOS.x,(int)CharPOS.y];
+        CharPOS.y = 1.5f + heightmap[(int)CharPOS.x, (int)CharPOS.y];
         CharPOS.z = 15;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

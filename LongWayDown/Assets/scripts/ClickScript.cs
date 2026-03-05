@@ -7,8 +7,8 @@ public class ClickScript : MonoBehaviour, IPointerDownHandler
 {
     public void OnPointerDown(PointerEventData eventData)
     {
-        
         Debug.Log("pointerDown");
+
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
