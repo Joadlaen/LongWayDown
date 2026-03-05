@@ -1,12 +1,16 @@
 using UnityEngine;
 
-public class LevelTwoScript : MonoBehaviour
+public class LevelthreeScript : MonoBehaviour
 {
 
-    public GameObject BlankSquare;
-    public GameObject PlayerChar;
+    public GameObject blankSquare;
+    public GameObject Playerchar;
 
     Vector3 CharPOS;
+
+    public float CharX;
+    public float CharY;
+    public float CharZ;
 
     public int gridHorSize = 20;
     public int gridVertSize = 30;
@@ -22,24 +26,24 @@ public class LevelTwoScript : MonoBehaviour
         {
             for (int j = 0; j < gridVertSize; j++)
             {
-                if (i <= 10)
+                if (i-5 >= j)
                 {
                     heightmap[i, j] = Random.Range(0.1f, 0.5f) + 1;
-                    Instantiate(BlankSquare, new Vector3(i, heightmap[i, j], j), Quaternion.identity);
+                    Instantiate(blankSquare, new Vector3(i, heightmap[i, j], j), Quaternion.identity);
                 }
                 else
                 {
                     heightmap[i, j] = Random.Range(0.1f, 0.5f);
-                    Instantiate(BlankSquare, new Vector3(i, heightmap[i, j], j), Quaternion.identity);
+                    Instantiate(blankSquare, new Vector3(i, heightmap[i, j], j), Quaternion.identity);
                 }
 
             }
         }
 
-        CharPOS.x = 10;
-        CharPOS.y = 1.5f + heightmap[(int)CharPOS.x, (int)CharPOS.y];
-        CharPOS.z = 15;
-        PlayerChar.transform.position = CharPOS;
+        CharPOS.x = CharX;
+        CharPOS.y = CharY + heightmap[(int)CharPOS.x, (int)CharPOS.y];
+        CharPOS.z = CharZ;
+        Playerchar.transform.position = CharPOS;
     }
 
     // Update is called once per frame
