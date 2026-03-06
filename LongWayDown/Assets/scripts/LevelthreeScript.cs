@@ -5,8 +5,13 @@ public class LevelthreeScript : MonoBehaviour
 
     public GameObject blankSquare;
     public GameObject Playerchar;
+    public GameObject Key;
+    public GameObject Goal;
 
     Vector3 CharPOS;
+    Vector3 KeyPOS;
+    Vector3 GoalPOS;
+
 
     public float CharX;
     public float CharY;
@@ -44,6 +49,16 @@ public class LevelthreeScript : MonoBehaviour
         CharPOS.y = CharY + heightmap[(int)CharPOS.x, (int)CharPOS.y];
         CharPOS.z = CharZ;
         Playerchar.transform.position = CharPOS;
+
+        KeyPOS.x = 20;
+        KeyPOS.y = 1 + heightmap[(int)KeyPOS.x, (int)KeyPOS.z];
+        KeyPOS.z = 1;
+        Key.transform.position = KeyPOS;
+
+        GoalPOS.x = 20;
+        GoalPOS.y = 1 + heightmap[(int)GoalPOS.x, (int)GoalPOS.z];
+        GoalPOS.z = 30;
+        Goal.transform.position = GoalPOS;
     }
 
     // Update is called once per frame

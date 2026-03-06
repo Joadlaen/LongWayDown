@@ -243,6 +243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63694f988e54be4eb7759cd7200fa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeyScript
+  Key: {fileID: 1862780333}
+  Goal: {fileID: 97032453}
+  Player: {fileID: 1533987441}
+  buttonSet: {fileID: 256534467}
+  KeyFlag: 0
 --- !u!1 &256534464
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 256534466}
   - component: {fileID: 256534465}
+  - component: {fileID: 256534467}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -293,6 +299,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256534467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256534464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a899329452e344343a920dc93fd5b075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::buttonScripts
+  First: 0
+  Second: 0
 --- !u!1 &441229277
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47e139a3e644d04a90ef334cf55df0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementScript
-  speed: 0
+  speed: 2
 --- !u!1 &1862780333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63694f988e54be4eb7759cd7200fa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeyScript
+  Key: {fileID: 1862780333}
+  Goal: {fileID: 97032453}
+  Player: {fileID: 1533987441}
+  buttonSet: {fileID: 256534467}
+  KeyFlag: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

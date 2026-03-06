@@ -61,7 +61,7 @@ public class LevelTwoScript : MonoBehaviour
 
         SwitchPOS.x = 1;
         SwitchPOS.y = 1.5f + heightmap[(int)SwitchPOS.x, (int)SwitchPOS.y];
-        SwitchPOS.z = 10;
+        SwitchPOS.z = 1;
         Switch.transform.position = SwitchPOS;
 
         CagePOS.x = 1;
