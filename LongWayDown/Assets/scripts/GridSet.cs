@@ -9,6 +9,8 @@ public class GridSet : MonoBehaviour
     public GameObject EndGoal;
 
     Vector3 CharPOS;
+    Vector3 KeyPOS;
+    Vector3 GoalPOS;
 
     public int gridHorSize = 20;
     public int gridVertSize = 30;
@@ -34,6 +36,16 @@ public class GridSet : MonoBehaviour
         CharPOS.y = 1.5f + heightmap[(int)CharPOS.x,(int)CharPOS.y];
         CharPOS.z = 15;
         PlayerChar.transform.position = CharPOS;
+
+        KeyPOS.x = 1;
+        KeyPOS.y = 1.5f + heightmap[(int)KeyPOS.x, (int)KeyPOS.y];
+        KeyPOS.z = 10;
+        EndKey.transform.position = KeyPOS;
+
+        GoalPOS.x = 10;
+        GoalPOS.y = 1.5f + heightmap[(int)GoalPOS.x, (int)GoalPOS.y];
+        GoalPOS.z = 1;
+        EndGoal.transform.position = GoalPOS;
     }
 
     // Update is called once per frame
