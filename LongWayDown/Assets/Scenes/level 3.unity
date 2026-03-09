@@ -431,7 +431,7 @@ Transform:
   m_GameObject: {fileID: 1445033974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0578, y: 0.26262, z: 7.08385}
+  m_LocalPosition: {x: 9.99, y: 0.26262, z: 7.08385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -453,6 +453,7 @@ MonoBehaviour:
   Goal: {fileID: 1458388138}
   Player: {fileID: 383287646}
   buttonSet: {fileID: 2029716954}
+  KeySet: {fileID: 0}
   KeyFlag: 0
 --- !u!1 &1458388138
 GameObject:
@@ -582,6 +583,7 @@ MonoBehaviour:
   Goal: {fileID: 1458388138}
   Player: {fileID: 383287646}
   buttonSet: {fileID: 2029716954}
+  KeySet: {fileID: 0}
   KeyFlag: 0
 --- !u!1 &1653709704
 GameObject:
