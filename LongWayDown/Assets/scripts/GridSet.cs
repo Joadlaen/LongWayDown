@@ -15,6 +15,7 @@ public class GridSet : MonoBehaviour
     public int gridHorSize = 20;
     public int gridVertSize = 30;
 
+    public bool KeyFlag = false;
 
     float[,] heightmap;
 

@@ -8,22 +8,23 @@ public class KeyScript: MonoBehaviour
     public GameObject Player;
 
     public buttonScripts buttonSet;
-
-    public bool KeyFlag = false;
+    public GridSet KeySet;
 
     public void OnCollisionEnter(Collision collision)
     {
+
         if (this.gameObject.tag == "Key")
         {
-            KeyFlag = true;
+            KeySet.KeyFlag = true;
             Destroy(this.gameObject);
         }
 
         else if (this.gameObject.tag == "Goal")
         {
-            if (KeyFlag)
+            Debug.Log("");
+            if (KeySet.KeyFlag)
             {
-                KeyFlag = false;
+                KeySet.KeyFlag = false;
                 if (SceneManager.GetActiveScene().name == "CurrentLevel")
                 {
                     buttonSet.First = true;
